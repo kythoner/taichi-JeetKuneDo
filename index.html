@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的第一个页面</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+
+    @keyframes x {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    #bagua {
+      /* border: 1px solid red; */
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+      animation: x 8s infinite linear;
+      box-shadow: 0px 0px 30px 15px rgba(255, 0, 0, 0.75);
+    }
+
+
+
+    #bagua>div:first-child {
+      /* border: 10px solid green; */
+      background-color: #F90400;
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+    }
+
+    #bagua>div:nth-child(2) {
+      /* border: 10px solid blue; */
+      background-color: #FDFE01;
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      right: 0;
+    }
+
+    #bagua>div:nth-child(3) {
+      /* border: 2px solid red; */
+      background-color: #F90400;
+      border-radius: 50%;
+      width: 50%;
+      height: 50%;
+      position: absolute;
+      left: 50%;
+      margin-left: -25%;
+    }
+
+    #bagua>div:nth-child(4) {
+      /* border: 2px solid red; */
+      background-color: #FDFE01;
+      border-radius: 50%;
+      width: 50%;
+      height: 50%;
+      position: absolute;
+      left: 50%;
+      margin-left: -25%;
+      bottom: 0;
+    }
+
+    #bagua>div:nth-child(3)>div {
+      /* border: 2px solid red; */
+      border-radius: 50%;
+      background-color: #FDFE01;
+      width: 30%;
+      height: 30%;
+      position: absolute;
+      left: 50%;
+      margin-left: -15%;
+      top: 50%;
+      margin-top: -15%;
+    }
+
+    #bagua>div:nth-child(4)>div {
+      /* border: 1px solid black; */
+      border-radius: 50%;
+      background-color: #F90400;
+      width: 30%;
+      height: 30%;
+      position: absolute;
+      left: 50%;
+      margin-left: -15%;
+      bottom: 50%;
+      margin-bottom: -15%;
+    }
+
+    #bagua-description {
+      margin-top: 1em;
+      font-size: 4em;
+      color: white;
+      font-family: 隶书;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+    }
+
+    #bagua-wrapper {
+      /* border: 1px solid red; */
+      background-color: black;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    @media (max-width: 500px) {
+      #bagua {
+        width: 200px;
+        height: 200px;
+      }
+
+      #bagua-description {
+        font-size: 6vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="bagua-wrapper">
+    <div id="bagua">
+      <div></div>
+      <div></div>
+      <div>
+        <div></div>
+      </div>
+      <div>
+        <div></div>
+      </div>
+    </div>
+    <div id="bagua-description">
+      以无限为有限 以无法为有法
+    </div>
+  </div>
+</body>
+
+</html>
